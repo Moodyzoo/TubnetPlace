@@ -28,4 +28,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ghcr.io/placenl/chief:latest
+          tags: ghcr.io/moodyzoo/tubnetplace:latest
