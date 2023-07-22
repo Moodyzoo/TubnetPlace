@@ -84,6 +84,9 @@ app.use('/orders', (req, res, next) => {
 app.use('/orders', express.static(IMAGES_DIRECTORY));
 app.use('/', express.static('./web'))
 
+//serve /tubnetplace.user.js from the /scripts directory
+app.use('/scripts', express.static('./scripts'));
+
 app.listen(HTTP_PORT, () => {
     console.log(`Serving requests on port ${HTTP_PORT}!`);
 });

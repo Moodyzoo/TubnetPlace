@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    image: ghcr.io/moodyzoo/tubnetplace:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./images:/var/tubnetplace/images
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: chief
+      POSTGRES_USER: chief
+      POSTGRES_DB: chief
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    
