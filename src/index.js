@@ -85,11 +85,7 @@ app.use('/orders', express.static(IMAGES_DIRECTORY));
 app.use('/', express.static('./web'))
 
 //serve /tubnetplace.user.js from the /scripts directory
-app.get('/tubnetplace.user.js', (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'scripts', 'tubnetplace.user.js'));
-    //also the auto updater
-    res.sendFile(path.join(process.cwd(), 'scripts', 'tubnetplace-autupdater.user.js'));
-});
+app.use('/scripts', express.static('./scripts'));
 
 
 app.listen(HTTP_PORT, () => {

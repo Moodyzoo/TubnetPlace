@@ -6,8 +6,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./images:/var/tubnetplace/images
-      - ./scripts:/var/tubnetplace/scripts
+      - ./images:/app/images
+      - ./scripts:/app/scripts
     depends_on:
       - postgres
     environment:
