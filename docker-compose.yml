@@ -5,6 +5,7 @@ services:
     image: ghcr.io/moodyzoo/tubnetplace:latest
     ports:
       - "3000:3000"
+    restart: always
     volumes:
       - ./images:/app/images
       - ./scripts:/app/scripts
