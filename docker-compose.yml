@@ -4,11 +4,14 @@ services:
   web:
     image: ghcr.io/moodyzoo/tubnetplace:latest
     ports:
-      - "80:80"
+      - "3000:3000"
     volumes:
       - ./images:/var/tubnetplace/images
+      - ./scripts:/var/tubnetplace/scripts
     depends_on:
       - postgres
+    environment:
+      POSTGRES_CONNECTION_URI: postgres://chief:chief@postgres/chief
   postgres:
     image: postgres:latest
     environment:
