@@ -84,7 +84,7 @@ app.use('/orders', (req, res, next) => {
 app.use('/orders', express.static(IMAGES_DIRECTORY));
 app.use('/', express.static('./web'))
 
-//serve /tubnetplace.user.js from the /scripts directory
+//serve /tubnetplace.user.js from the /scripts directory YES
 app.use('/scripts', express.static('./scripts'));
 
 
