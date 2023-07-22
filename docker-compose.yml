@@ -12,6 +12,7 @@ services:
       - postgres
     environment:
       POSTGRES_CONNECTION_URI: postgres://chief:chief@postgres/chief
+      BASE_URL: https://tubnetplace.live
   postgres:
     image: postgres:latest
     environment:
